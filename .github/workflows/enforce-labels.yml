@@ -5,6 +5,7 @@ jobs:
   enforce-label:
     runs-on: ubuntu-latest
     steps:
-    - uses: yogevbd/enforce-label-action@master
+    - uses: yogevbd/enforce-label-action@2.1.0
       with:
         REQUIRED_LABELS_ANY: "Reopen"
+        REQUIRED_LABELS_ANY_DESCRIPTION: "Apenas PRs com a label Reopen pode ser mesclada no momento"
