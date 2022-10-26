@@ -1,0 +1,10 @@
+on:
+  pull_request:
+     branches: main
+jobs:
+  enforce-label:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: yogevbd/enforce-label-action@master
+      with:
+        REQUIRED_LABELS_ANY: "Reopen"
