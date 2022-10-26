@@ -8,4 +8,4 @@ jobs:
     - uses: yogevbd/enforce-label-action@2.1.0
       with:
         REQUIRED_LABELS_ANY: "Reopen"
-        REQUIRED_LABELS_ANY_DESCRIPTION: "Apenas PRs com a label Reopen pode ser mesclada no momento"
+        REQUIRED_LABELS_ANY_DESCRIPTION: "Apenas PRs com a label 'Reopen' pode ser mesclados no momento."
