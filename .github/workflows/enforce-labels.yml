@@ -3,7 +3,7 @@ on:
      types: [opened, labeled, unlabeled]
 jobs:
   enforce-label:
-    if: ${{true}}
+    if: ${{enforce-label.IS_TESTING}}
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@2.1.0
