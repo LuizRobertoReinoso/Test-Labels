@@ -3,11 +3,12 @@ on:
      types: [opened, labeled, unlabeled]
 jobs:
   enforce-label:
-    if: ${{ secrets.TEST == 'true' }}
+    env:
+      TEST: ${{ secrets.TEST }}
+    if: ${{ TEST == 'true' }}
     runs-on: ubuntu-latest
     steps:
     - uses: yogevbd/enforce-label-action@2.1.0
       with:
-        teste: ${{ secrets.TEST }}
         REQUIRED_LABELS_ANY: "Reopen"
         REQUIRED_LABELS_ANY_DESCRIPTION: "Apenas PRs com a label 'Reopen' pode ser mesclados no momento."
