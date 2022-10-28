@@ -5,8 +5,8 @@ jobs:
   enforce-label:
     env:
       TEST: ${{ secrets.TEST }}
-    if: env.TEST == 'true'
     runs-on: ubuntu-latest
+    if: env.TEST == 'true'
     steps:
     - uses: yogevbd/enforce-label-action@2.1.0
       with:
