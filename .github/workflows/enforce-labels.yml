@@ -6,7 +6,7 @@ jobs:
     if: ${{enforce-label.IS_TESTING == 'true'}}
     runs-on: ubuntu-latest
     steps:
-    - uses: yogevbd/enforce-label-action@2.1.0
+    - uses: yogevbd/secrets.enforce-label-action@2.1.0
       with:
         REQUIRED_LABELS_ANY: "Reopen"
         REQUIRED_LABELS_ANY_DESCRIPTION: "Apenas PRs com a label 'Reopen' pode ser mesclados no momento."
